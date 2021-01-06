@@ -25,3 +25,9 @@ h1.toptitle{
     border: 2px black solid;
 }
 
+table {
+    margin: auto;
+    width: 80%;
+    border: 2px solid;
+  }
+
