@@ -9,6 +9,61 @@ and open the template in the editor.
 */
 html {
     font-family: 'Roboto', sans-serif;
+    margin: auto;
+    text-align: center;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+}
+
+.ins {
+    width: 50%;
+    background-color: lightpink;
+}
+
+.hex{
+    width: 50%;
+    background-color: lightskyblue;
+    display: flex;
+    flex-direction: row;
+}
+
+.inputs{
+    background-color: lightcoral;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.number{
+    display: block;
+    margin: auto;
+}
+
+.buttons{
+    background-color: lightsalmon;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.lineaction{
+    display: block;
+    margin: auto;
+}
+
+.hexaction{
+    
+}
+
+.hexadiagram{
+    background-color: lightseagreen;
+    display: block;
+    margin: auto;
 }
   
 h1.toptitle{
@@ -25,9 +80,15 @@ h1.toptitle{
     border: 2px black solid;
 }
 
-table {
+table{
     margin: auto;
     width: 80%;
-    border: 2px solid;
-  }
+    border: 2px solid black;
+}
+
+td{
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+}
 
