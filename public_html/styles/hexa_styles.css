@@ -7,10 +7,10 @@ and open the template in the editor.
     Created on : 5/01/2021, 07:19:32 PM
     Author     : kat
 */
-html {
+body {
     font-family: 'Roboto', sans-serif;
-    margin: auto;
-    text-align: center;
+    font-size: 20px;
+    background-color: #f2f2f2;
 }
 
 .contenedor{
@@ -21,15 +21,23 @@ html {
 }
 
 .ins {
-    width: 50%;
-    background-color: lightpink;
+    width: 40%;
+    background-color: white;
+    margin: auto;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 3px 3px 20px grey;
 }
 
 .hex{
-    width: 50%;
-    background-color: lightskyblue;
+    width: 40%;
     display: flex;
     flex-direction: row;
+    background-color: white;
+    margin: auto;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 3px 3px 20px grey;    
 }
 
 .inputs{
@@ -37,11 +45,14 @@ html {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    padding: 10px;
 }
 
-.number{
+.number-input{
     display: block;
     margin: auto;
+    font-size: 45px;
+    width: 20%;
 }
 
 .buttons{
@@ -65,20 +76,26 @@ html {
     display: block;
     margin: auto;
 }
-  
-h1.toptitle{
-    text-align: center;
-    font-size: 2em;
-    border: 10px;
-    border-color: black;
+
+h1 {
+    font-family: 'Roboto Black', sans-serif, '900';
+    font-size: 70px;
 }
-  
+
+b {
+    font-family: 'Roboto Black', sans-serif, '900';
+    font-size: 45px;
+}
+    
 .box{
     background-color: white;
-    width: 20%;
     margin: auto;
-    border: 2px black solid;
+    border-radius: 15px;
+    padding: 30px;
+    width: 24.99999%;
+    box-shadow: 3px 3px 20px grey;
 }
+
 
 table{
     margin: auto;
