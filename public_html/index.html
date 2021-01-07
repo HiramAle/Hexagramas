@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="styles/hexa_styles.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="js/hexagramGenerator.js"></script>
     </head>
     <body>
         <div class="box">
@@ -13,21 +14,23 @@
         <br><br>
         <div class="contenedor">
             <div class="ins">             
-                <span>Los símbolos del I Ching son hexagramas, grupos de líneas rectas y quebradas que se identifican con el Yin-yang y que se obtienen por un método aleatorio.</span>
+                <p class="info-text">Los símbolos del I Ching son hexagramas, grupos de líneas rectas y quebradas que se identifican con el Yin-yang y que se obtienen por un método aleatorio.</p>
                 
-                <p>Escribe los tres valores, uno en cada casilla:</p>
+                <p class="info-text">Escribe los tres valores, uno en cada casilla:</p>
                 
                 <div class="inputs">
-                    <input type="text" class="number-input" id="digit_1">
-                    <input type="text" class="number-input" id="digit_2">
-                    <input type="text" class="number-input" id="digit_3">
+                    <input type="text" class="number-input" id="digit_1" maxlength="1" onFocus="onFocusInput(this)" onBlur="onBlurInput(this)" placeholder="2">
+                    <input type="text" class="number-input" id="digit_2" maxlength="1" onFocus="onFocusInput(this)" onBlur="onBlurInput(this)" placeholder="2">
+                    <input type="text" class="number-input" id="digit_3" maxlength="1" onFocus="onFocusInput(this)" onBlur="onBlurInput(this)" placeholder="2">
                 </div>
                 <div class="buttons">
-                    <input type="button" value="Agregar linea" class="lineaction">
-                    <input type="button" value="Borrar linea" class="lineaction">
-                    
+                    <input type="button" value="Agregar linea" class="lineaction-button">
+                    <input type="button" value="Borrar linea" class="lineaction-button">
                 </div>
-                <input type="button" value="Borrar hexagrama" class="hexaction">
+                <div class="buttons">
+                    <input type="button" value="Borrar hexagrama" class="hexaction-button">
+                </div>
+                
             </div>
             <div class="hex">
                 <div class="hexadiagram" id="diagram1">
@@ -37,7 +40,7 @@
                     </div>
                 </div>
                 <div class="hexadiagram" id="diagram2">
-                    <div>1. Ch'ien</div>
+                    <div>Mutante</div>
                     <div>
                         
                     </div>
@@ -45,6 +48,7 @@
                 <div class="hexadiagram" id="diagram3">
                     <div>1. Ch'ien</div>
                     <div>
+                        
                     </div>
                 </div>
             </div>

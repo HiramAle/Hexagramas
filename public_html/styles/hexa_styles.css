@@ -9,7 +9,7 @@ and open the template in the editor.
 */
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     background-color: #f2f2f2;
 }
 
@@ -41,7 +41,7 @@ body {
 }
 
 .inputs{
-    background-color: lightcoral;
+    background-color: white;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -51,28 +51,53 @@ body {
 .number-input{
     display: block;
     margin: auto;
-    font-size: 45px;
+    font-size: 40px;
     width: 20%;
-}
-
-.buttons{
-    background-color: lightsalmon;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-}
-
-.lineaction{
-    display: block;
-    margin: auto;
-}
-
-.hexaction{
+    height: 50px;
+    text-align: center;
     
 }
 
+.buttons{
+    background-color: white;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 10px;
+}
+
+.lineaction-button{
+    display: block;
+    margin: auto;
+    background-color: #f25c05;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    color:#ffffff;
+    font-family: 'Roboto Light', sans-serif, '300';
+    font-size: 18px;
+    padding: 17px 34px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #000000;
+}
+
+.hexaction-button{
+    display: block;
+    margin: auto; 
+    background-color: #5A7302;
+    border-radius: 20px;
+    border: none;
+    cursor:pointer;
+    color:#ffffff;
+    font-family: 'Roboto Light', sans-serif, '300';
+    font-size: 18px;
+    padding: 17px 34px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #000000;
+}
+
 .hexadiagram{
-    background-color: lightseagreen;
+    background-color: white;
     display: block;
     margin: auto;
 }
@@ -85,6 +110,15 @@ h1 {
 b {
     font-family: 'Roboto Black', sans-serif, '900';
     font-size: 45px;
+    margin: auto;
+}
+
+.info-text{
+    font-family: 'Roboto Light', sans-serif, '300';
+    font-size: 20px;
+    background-color: white;
+    text-align: center;
+    padding: 5px 20px;
 }
     
 .box{
@@ -94,18 +128,8 @@ b {
     padding: 30px;
     width: 24.99999%;
     box-shadow: 3px 3px 20px grey;
-}
-
-
-table{
-    margin: auto;
-    width: 80%;
-    border: 2px solid black;
-}
-
-td{
-    width: 100px;
-    text-align: center;
-    vertical-align: middle;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
 }
 
