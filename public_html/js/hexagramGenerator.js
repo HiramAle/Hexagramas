@@ -12,6 +12,18 @@ function onBlurInput(e){
     e.placeholder='2';
 }
 
+function addLine(){
+    
+}
+
+function eraseLine(){
+    
+}
+
+function eraseHexagram(){
+    
+}
+
 
 
 
