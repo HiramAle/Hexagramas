@@ -26,26 +26,26 @@ function addLine() {
             line_values.push(suma);
             // Generar linea
             var linebreak = document.createElement("br");
-  //          var content = document.createTextNode("_______");
+            var content;
             
 
 //            var line = document.createElement("div");            
             switch(suma){
                 case 6:
                     console.log("Generando linea yin mutante ___x___ ...");
-                    var content = document.createTextNode("___x___");
+                    content = document.createTextNode("___x___");
                     break;
                 case 7:
                     console.log("Generando linea yang _______ ...");
-                    var content = document.createTextNode("_______");
+                    content = document.createTextNode("_______");
                     break;
                 case 8:
                     console.log("Generando linea yin ___ ___ ...");
-                    var content = document.createTextNode("___ ___");
+                    content = document.createTextNode("___ ___");
                     break;
                 case 9:
                     console.log("Generando linea yang mutante ___o___ ...");
-                    var content = document.createTextNode("___o___");
+                    content = document.createTextNode("___o___");
                     break;
                 default:
                     alert("Error al generar linea ):");
