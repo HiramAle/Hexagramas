@@ -98,13 +98,14 @@ body {
     background-color: white;
     display: block;
     margin: auto;
+    text-align: center;
 }
 
 .diagram{
     background-color: #f25c05;
     border-radius: 7px;
     height: 200px;   
-    width: 150%;            
+    width: 150%;           
 }
 
 h1 {

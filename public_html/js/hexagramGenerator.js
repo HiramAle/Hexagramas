@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 var line_values = [];
-console.log(line_values);
-var line = document.createElement("div");
 
 function onFocusInput(e) {
     e.placeholder = '';
@@ -26,12 +24,36 @@ function addLine() {
         if (!(line_values.length == 6)) {
             var suma = parseInt(num1.value) + parseInt(num2.value) + parseInt(num3.value);
             line_values.push(suma);
-
             // Generar linea
-            var line = document.createElement("div");
-            line.innerText = "_______";
-            document.getElementById("dgm2").appendChild(line);
+            var linebreak = document.createElement("br");
+  //          var content = document.createTextNode("_______");
+            
 
+//            var line = document.createElement("div");            
+            switch(suma){
+                case 6:
+                    console.log("Generando linea yin mutante ___x___ ...");
+                    var content = document.createTextNode("___x___");
+                    break;
+                case 7:
+                    console.log("Generando linea yang _______ ...");
+                    var content = document.createTextNode("_______");
+                    break;
+                case 8:
+                    console.log("Generando linea yin ___ ___ ...");
+                    var content = document.createTextNode("___ ___");
+                    break;
+                case 9:
+                    console.log("Generando linea yang mutante ___o___ ...");
+                    var content = document.createTextNode("___o___");
+                    break;
+                default:
+                    alert("Error al generar linea ):");
+            }            
+
+            document.getElementById("dgm2").appendChild(content);
+            document.getElementById("dgm2").appendChild(linebreak);
+            // document.getElementById("dgm2").appendChild(line);
             resetInputs();
             console.log(line_values);
         } else {
@@ -44,8 +66,13 @@ function eraseLine() {
     if (!(line_values.length == 0)) {
         line_values.pop();
         //Borrar linea
-        var last_line = document.getElementById("dgm2").lastChild;
-        document.getElementById("dgm2").removeChild(last_line);
+        console.log("Eliminando ultima linea...");
+
+        for (var i = 0; i < 2; i++) {
+            var last_line = document.getElementById("dgm2").lastChild;
+            document.getElementById("dgm2").removeChild(last_line);
+        }
+
         console.log(line_values);
     } else {
         alert("No hay contenido para borrar.");
