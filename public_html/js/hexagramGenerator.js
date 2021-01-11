@@ -5,6 +5,7 @@
  */
 var line_values = [];
 console.log(line_values);
+var line = document.createElement("div");
 
 function onFocusInput(e) {
     e.placeholder = '';
@@ -25,6 +26,12 @@ function addLine() {
         if (!(line_values.length == 6)) {
             var suma = parseInt(num1.value) + parseInt(num2.value) + parseInt(num3.value);
             line_values.push(suma);
+
+            // Generar linea
+            var line = document.createElement("div");
+            line.innerText = "_______";
+            document.getElementById("dgm2").appendChild(line);
+
             resetInputs();
             console.log(line_values);
         } else {
@@ -34,8 +41,15 @@ function addLine() {
 }
 
 function eraseLine() {
-    line_values.pop();
-    console.log(line_values);
+    if (!(line_values.length == 0)) {
+        line_values.pop();
+        //Borrar linea
+        var last_line = document.getElementById("dgm2").lastChild;
+        document.getElementById("dgm2").removeChild(last_line);
+        console.log(line_values);
+    } else {
+        alert("No hay contenido para borrar.");
+    }
 }
 
 function eraseHexagram() {
