@@ -4,6 +4,11 @@
  * and open the template in the editor.
  */
 var line_values = [];
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("diagram1").style.display = "none";
+    document.getElementById("diagram3").style.display = "none";
+
+});
 
 function onFocusInput(e) {
     e.placeholder = '';
@@ -27,10 +32,8 @@ function addLine() {
             // Generar linea
             var linebreak = document.createElement("br");
             var content;
-            
 
-//            var line = document.createElement("div");            
-            switch(suma){
+            switch (suma) {
                 case 6:
                     console.log("Generando linea yin mutante ___x___ ...");
                     content = document.createTextNode("___x___");
@@ -49,15 +52,31 @@ function addLine() {
                     break;
                 default:
                     alert("Error al generar linea ):");
-            }            
+            }
+            document.getElementById("dgm2").insertBefore(linebreak, document.getElementById("dgm2").firstChild);
+            document.getElementById("dgm2").insertBefore(content, document.getElementById("dgm2").firstChild);
 
-            document.getElementById("dgm2").appendChild(content);
-            document.getElementById("dgm2").appendChild(linebreak);
-            // document.getElementById("dgm2").appendChild(line);
             resetInputs();
             console.log(line_values);
         } else {
             alert("Un hexagrama solo puede contener 6 lineas.");
+        }
+    }
+
+    if (line_values.length == 6) {
+        // indexOf: El primer índice del elemento en la matriz; -1 si no se encuentra.
+        if (((line_values.indexOf(6)) && (line_values.indexOf(9))) != -1) {
+            console.log("Mutante found");
+
+            for (var i = 0; i<line_values.length; i++) {
+                console.log(line_values[i]);
+                
+            }
+
+            document.getElementById("diagram1").style.display = "block";
+            document.getElementById("diagram3").style.display = "block";
+
+
         }
     }
 }
@@ -67,12 +86,11 @@ function eraseLine() {
         line_values.pop();
         //Borrar linea
         console.log("Eliminando ultima linea...");
-
+        var last_line;
         for (var i = 0; i < 2; i++) {
-            var last_line = document.getElementById("dgm2").lastChild;
+            last_line = document.getElementById("dgm2").firstChild;
             document.getElementById("dgm2").removeChild(last_line);
         }
-
         console.log(line_values);
     } else {
         alert("No hay contenido para borrar.");
@@ -81,7 +99,13 @@ function eraseLine() {
 
 function eraseHexagram() {
     resetInputs();
+    var last_line;
+    for (var i = 0; i < (line_values.length) * 2; i++) {
+        last_line = document.getElementById("dgm2").lastChild;
+        document.getElementById("dgm2").removeChild(last_line);
+    }
     line_values = [];
+    console.log("Borrando hexagrama...");
     console.log(line_values);
 }
 

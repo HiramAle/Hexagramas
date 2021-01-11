@@ -108,6 +108,12 @@ body {
     width: 150%;           
 }
 
+#dgm2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 h1 {
     font-family: 'Roboto Black', sans-serif, '900';
     font-size: 70px;
